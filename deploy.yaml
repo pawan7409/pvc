@@ -12,8 +12,8 @@ spec:
       app: amarpawan
   strategy:
     rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
+      maxSurge: 
+      maxUnavailable: 
     type: RollingUpdate   
   template:
     metadata:
