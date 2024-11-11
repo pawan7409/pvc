@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-amar
+  namespace: amarpawan
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi  
+  selector:
+    matchLabels:
+      app: rs-amarpawan  
+  storageClassName: amar
+
+
+  
+   
+

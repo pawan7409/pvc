@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-amar
+  labels:
+    app: rs-amarpawan
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  azureFile:
+    secretName: azure-secret-pawanamar
+    secretNamespace: amarpawan
+    shareName: amarpawan
+

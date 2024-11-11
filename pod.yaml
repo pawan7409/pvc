@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:   
+  name: pod-amar
+  namespace: amarpawan
+  labels:
+    app: rs-amarpawan
+spec:
+  volumes:
+    - name: pv-amar
+      persistentVolumeClaim:
+        claimName: pvc-amar
+  containers:
+    - name: pod-amar
+      image: nginx
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: pv-amar
+          mountPath: /usr/share/nginx/html

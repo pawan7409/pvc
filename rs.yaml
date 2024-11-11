@@ -1,0 +1,30 @@
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs-amar
+  namespace: amarpawan
+  labels:
+    app: rs-amarpawan
+spec:
+  replicas: 5
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values: 
+          - rs-amarpawan
+  template:
+    metadata:
+      name: rs-amar
+      labels:
+        app: rs-amarpawan
+    spec:
+      containers:
+        - name: rs-amar
+          image: nginx
+          ports:
+            - containerPort: 80
+
+      
+

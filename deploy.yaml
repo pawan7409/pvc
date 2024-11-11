@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: amarpawan
+  namespace: amarpawan  # Corrected "Namespace" to lowercase
+  labels:
+    app: amarpawan
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: amarpawan
+  template:
+    metadata:
+      labels:
+        app: amarpawan
+    spec:
+      containers:
+      - name: amarpawan
+        image: nginx
+        ports:
+        - containerPort: 80
