@@ -9,7 +9,7 @@ spec:
   replicas: 5
   selector:
     matchLabels:
-      app: amarpawan
+      app: amar
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -19,9 +19,9 @@ spec:
     metadata:
       labels:
         app: amarpawan
-    spec:
-      containers:
-      - name: amarpawan
-        image: nginx
-        ports:
-        - containerPort: 80
+    # spec:
+    #   containers:
+    #   - name: amarpawan
+    #     image: nginx
+    #     ports:
+    #     - containerPort: 80
