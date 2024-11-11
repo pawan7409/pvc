@@ -9,7 +9,7 @@ spec:
   replicas: 5
   selector:
     matchLabels:
-      app: amar
+      app: amarpawan
   strategy:
     rollingUpdate:
       maxSurge: 25%
